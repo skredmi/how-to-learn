@@ -19,17 +19,17 @@
   background-color: #f2f2f2;
 }
 
-.logo{
-  position: absolute;
-  z-index: 2;
+.logo {
   width: 183px;
 }
 
-.logo__place_header{
+.logo_place_header{
   background-image: url(../images/logo_place_header.svg);
   height: 32px;
   top: 30px;
   left: 64px;
+  position: absolute;
+  z-index: 2;
 }
 
 .header__title{
@@ -98,10 +98,11 @@
   width: 175px;
   font-size: 18px;
   line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #2f80ed;
   font-weight: normal;
   text-decoration: none;
-  
 }
 
 .two-columns__main-text {
@@ -120,8 +121,12 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
-  margin-top: 0;
   margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.two-columns__paragraph:nth-of-type(3n) {
+  margin-bottom: 0;
 }
 
 .digits {
@@ -189,7 +194,7 @@
   position: relative;
 }
 
-.title {
+.feynman__title {
   font-weight: bold;
   font-size: 120px;
   line-height: 1.15;
@@ -200,14 +205,14 @@
   margin-bottom: 70px;
 }
 
-.subtitle {
+.feynman__subtitle {
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
   z-index: 2;
 }
 
-.link {
+.feynman__link {
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
@@ -262,6 +267,7 @@
 
 .kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
   position: absolute;
   z-index: 1;
   width: 877px;
@@ -288,23 +294,18 @@
 .footer__column_content_copyright {
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: space-between;
   flex-basis: 711px;
 }
 
-.logo__place_footer {
+.logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
   height: 35px;
-  top: 0;
-  left: 0;
 }
 
 .footer__author {
   color: #f2f2f2;
   padding: 18px auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -333,12 +334,17 @@
 }
 
 .footer__column-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.footer__column-link {
   text-decoration: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   color: #f2f2f2;
-  padding-bottom: 16px;
 }
 
 .footer__social-icon {
